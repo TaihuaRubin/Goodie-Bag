@@ -4,10 +4,6 @@ import {getAllCandies} from '../reducers';
 import Candy from './Candy';
 
 class AllCandies extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
   componentDidMount() {
     this.props.getAllCandies();
   }
@@ -15,9 +11,14 @@ class AllCandies extends React.Component {
   render() {
     return (
       <div>
-        {this.props.candies.map(candy => {
-          return <Candy key={candy.id} candy={candy} />
-        })}
+        <h2 className="section-title">Candies</h2>
+        <ul className="container">
+          {this.props.candies.map(candy => (
+            <div className="card" key={candy.id}>
+              <Candy candy={candy} />
+            </div>
+          ))}
+        </ul>
       </div>
     )
   }

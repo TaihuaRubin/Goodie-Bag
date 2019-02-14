@@ -1,4 +1,7 @@
-import React from 'react'
+import React from 'react';
+import AppBar from '@material-ui/core/AppBar';
+import Toolbar from '@material-ui/core/Toolbar';
+import Button from '@material-ui/core/Button';
 import {
   BrowserRouter as Router,
   Link,
@@ -14,16 +17,16 @@ const Root = () => {
   return (
     <Router>
       <div>
-        <nav>
-          Goodie Bag
-          <Link to="/">Home</Link>
-          <Link to="/candies">Candies</Link>
-        </nav>
+        <AppBar position="static">
+          <Toolbar>
+            <Button color="inherit"><Link className="navlink" to="/">Home</Link></Button>
+            <Button color="inherit"><Link className="navlink" to="/candies">Candies</Link></Button>
+          </Toolbar>
+        </AppBar>
         <main>
           <h1>Welcome to the Goodie Bag!</h1>
           <p>What a nice home page for your goodies!</p>
         </main>
-
         <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/candies" component={AllCandies} />
@@ -37,4 +40,4 @@ const Root = () => {
   )
 }
 
-export default Root
+export default Root;
