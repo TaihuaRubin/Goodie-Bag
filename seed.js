@@ -19,7 +19,7 @@ const candies = [{
   name: 'M&M',
   description: 'Melts in your mouth, not in your hand',
   quantity: 4,
-  imageUrl: 'http://www.ocsaccess.com/admin/clientfiles/ucsne/images/xlarge/mm%20choc.jpg'
+  imageUrl: 'https://images.heb.com/is/image/HEBGrocery/000121396'
 }];
 
 const seed = async () => {
